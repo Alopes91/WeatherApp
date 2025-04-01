@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "app/(tabs)/index.tsx", "src/api/weather.ts"  ]
+, "app/index.tsx", "src/api/weather.ts"  ]
 }
