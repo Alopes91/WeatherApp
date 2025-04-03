@@ -38,7 +38,8 @@ const App = () => {
 
     const weatherData = weather
         ? [
-            { label: 'Cidade', value: `${weather.location.name}, ${weather.location.country}` },
+            { label: 'Cidade, Estado', value: `${weather.location.name}, ${weather.location.region}` },
+            { label: 'País', value: `${weather.location.country}` },
             { label: 'Temperatura', value: `${weather.current.temp_c}°C` },
             { label: 'Condição', value: `${weather.current.condition.text}` },
         ]
@@ -46,13 +47,13 @@ const App = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>🌤️ Previsão do Tempo Agora</Text>
+            <Text style={styles.title}>🌤️ CLIMA AGORA</Text>
 
             <TextInput
                 style={styles.input}
                 value={city}
                 onChangeText={setCity}
-                placeholder="Digite a cidade"
+                placeholder="Digite a nome da cidade."
                 onSubmitEditing={handleSubmitEditing}
                 returnKeyType="done"
             />
@@ -78,12 +79,12 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-    container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, marginTop: 50 },
-    title: { fontSize: 24, fontWeight: 'bold', marginBottom: 10 },
+    container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, marginTop: 10 },
+    title: { fontSize: 30, fontWeight: 'bold', marginBottom: 10 },
     input: { width: '80%', padding: 10, borderWidth: 1, borderRadius: 5, marginBottom: 10 },
     result: { marginTop: 30, alignItems: 'center' },
     city: { fontSize: 20, fontWeight: 'bold' },
-    temp: { fontSize: 26, fontWeight: 'bold' },
+    temp: { fontSize: 24, fontWeight: 'bold' },
     error: { color: 'red', marginTop: 10 },
 });
 
