@@ -4,39 +4,60 @@ Aplicativo desenvolvido em **React Native** que consome a **WeatherAPI** para ex
 
 ## 📁 Estrutura do Projeto
 
-A estrutura do projeto foi pensada para manter o código organizado e de fácil manutenção. A seguir, estão os arquivos principais e suas respectivas responsabilidades:
+O projeto está organizado em pastas e arquivos que seguem boas práticas para aplicações em React Native com Expo. Abaixo estão os principais diretórios e suas respectivas responsabilidades:
 
 ```bash
 WeatherApp/
-├── App.tsx               # Componente principal do aplicativo (ponto de entrada)
-├── weatherApi.ts         # Módulo responsável pela requisição de dados à WeatherAPI
-├── assets/               # Pasta opcional para imagens, ícones ou fontes (pode ser criada conforme a necessidade)
-├── node_modules/         # Dependências do projeto instaladas automaticamente
-├── package.json          # Define scripts, dependências e metadados do projeto
-├── tsconfig.json         # Configurações do TypeScript
-├── README.md             # Documentação do projeto
-├── .gitignore            # Arquivos e pastas ignorados pelo Git
-└── app.json / expo.json  # Configurações específicas do projeto com Expo
+├── app/
+│   ├── index.tsx           # Componente principal do aplicativo (ponto de entrada)
+│   ├── weatherApi.ts       # Módulo responsável pela requisição à API de clima (WeatherAPI)
+├── assets/                 # Recursos estáticos como imagens, fontes e ícones
+├── components/             # Componentes reutilizáveis da interface do app (a serem implementados)
+├── constants/              # Arquivos com constantes usadas globalmente (como temas, estilos, etc.)
+├── hooks/                  # Hooks personalizados que encapsulam lógica reutilizável
+├── node_modules/           # Dependências do projeto instaladas automaticamente (após o npm install)
+├── scripts/                # Scripts auxiliares ou utilitários (como automações, testes, etc.)
+├── .gitignore              # Lista de arquivos/pastas ignorados pelo Git
+├── README.md               # Documentação do projeto
+├── app.json                # Configurações gerais do projeto com Expo
+├── package.json            # Gerencia as dependências, scripts e metadados do projeto
+├── package-lock.json       # Registro exato das versões instaladas das dependências
+├── tsconfig.json           # Configuração do compilador TypeScript
 ```
-### Arquivos principais
 
-- **App.tsx**  
-  Arquivo principal do projeto. Contém a lógica da interface com o usuário, os estados, a manipulação dos dados climáticos e a renderização dos componentes. Nele também está a função `normalizeCityName`, que trata o nome da cidade para evitar problemas com acentos.
+### 🧠 Descrição dos Arquivos e Pastas
 
-- **weatherApi.ts**  
-  Arquivo que centraliza a chamada à API de clima (WeatherAPI), utilizando `axios` para realizar a requisição HTTP. A função `getWeather` recebe o nome da cidade e retorna os dados atuais do tempo. Também trata erros de forma genérica para manter a experiência do usuário consistente.
+- **`app/index.tsx`**  
+  Contém a lógica principal da aplicação: estado, tratamento de erros, requisição de dados da API, renderização da interface e entrada do app. Também implementa a função `normalizeCityName`.
 
-- **assets/** _(opcional)_  
-  Pasta onde podem ser armazenadas imagens, logos ou fontes personalizadas para o app, caso deseje futuramente expandir o projeto com identidade visual.
+- **`app/weatherApi.ts`**  
+  Responsável por buscar os dados do clima via `axios`, conectando-se à WeatherAPI e retornando os dados formatados para uso no app.
 
-- **package.json**  
-  Gerencia as dependências do projeto, como `react`, `react-native`, `axios`, `typescript` e outras. Também armazena os scripts básicos para iniciar o projeto com Expo.
+- **`assets/`**  
+  Pasta para armazenar imagens, fontes, ícones ou qualquer outro recurso estático utilizado no aplicativo.
 
-- **tsconfig.json**  
-  Arquivo de configuração do compilador TypeScript, definindo diretivas como o nível de checagem de tipo e o sistema de módulos.
+- **`components/`**  
+  Local reservado para criação de componentes reutilizáveis, como cartões de clima, botões customizados, etc. Facilita a modularização da interface.
 
-- **README.md**  
-  Documentação explicativa do projeto (como essa que você está criando 📝).
+- **`constants/`**  
+  Utilizada para armazenar valores fixos como cores, tamanhos de fonte, strings reutilizáveis ou endpoints da API.
+
+- **`hooks/`**  
+  Contém hooks customizados para abstração de lógica reutilizável, como por exemplo manipulação de input, status da rede, etc.
+
+- **`scripts/`**  
+  Ideal para scripts utilitários, como inicializações, geração de dados, testes automatizados ou limpeza de cache.
+
+- **`app.json`**  
+  Arquivo de configuração do projeto Expo (nome do app, tema, ícone, splash screen, permissões, etc.).
+
+- **`package.json` / `package-lock.json`**  
+  Controlam as dependências do projeto e suas versões. `package.json` também define os scripts disponíveis via terminal, como `start`, `build`, entre outros.
+
+- **`tsconfig.json`**  
+  Configurações do compilador TypeScript, definindo regras de tipagem, caminhos, e comportamento geral da linguagem.
+
+Vale destacar que a versão mais recente do aplicativo Clima Agora foi desenvolvida principalmente dentro da pasta **`app`**, com foco nos arquivos **`index.tsx`** e **`weatherApi.ts`**.
 
 ## 🚀 Tecnologias Utilizadas
 
