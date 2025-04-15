@@ -78,13 +78,13 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 ## ⚙️ Instalação e Execução
 
-1. Clone o repositório:
+1. **Clone o repositório:**
 
 ```bash
 git clone https://github.com/seu-usuario/clima-agora.git
 cd clima-agora
 ```
-2. Instale as dependências:
+2. **Instale as dependências:**
 
 ```bash
 npm install
@@ -92,7 +92,7 @@ npm install
 yarn install
 ```
 
-3. Adicione sua chave da WeatherAPI:
+3. **Adicione sua chave da WeatherAPI:**
 
 Abra o arquivo weatherApi.ts e substitua a constante API_KEY pela sua chave pessoal:
 
@@ -100,7 +100,7 @@ Abra o arquivo weatherApi.ts e substitua a constante API_KEY pela sua chave pess
 const API_KEY = 'SUA_CHAVE_AQUI';
 ```
 
-4. Execute o app com o Expo:
+4. **Execute o app com o Expo:**
 
 ```bash
 npx expo start
@@ -115,26 +115,39 @@ Na saída, você encontrará opções para abrir o aplicativo em um
 
 Você pode começar a desenvolver editando os arquivos dentro do diretório **app**. Este projeto usa [roteamento baseado em arquivo](https://docs.expo.dev/router/introduction).
 
-## Obtenha um novo projeto
+# 📱 Como Usar o Aplicativo Clima Agora
 
-Quando estiver pronto, execute:
+Clima Agora é um aplicativo simples e intuitivo que permite consultar as condições climáticas de qualquer cidade utilizando a **WeatherAPI**. A seguir, explicamos como usar o aplicativo de forma simples e prática.
 
-```bash
-npm run reset-project
-```
+1. **Abrindo o Aplicativo:**
+   - Após instalar e rodar o aplicativo no seu dispositivo móvel (Android ou iOS), a tela inicial será exibida com um título "🌤️ CLIMA AGORA" no topo.
 
-Este comando moverá o código inicial para o diretório **app-example** e criará um diretório **app** em branco onde você pode começar a desenvolver.
+2. **Buscar o Clima de uma Cidade:**
+   - No campo de entrada de texto logo abaixo do título, digite o nome da cidade que você deseja consultar. 
+   - O nome da cidade pode ser digitado de forma simples, sem a necessidade de acentuação, pois o sistema vai normalizar o texto automaticamente.
+   
+3. **Enviar a Solicitação:**
+   - Após digitar o nome da cidade, você pode pressionar a tecla **Enter** no teclado (se estiver usando um dispositivo físico ou emulador) ou clicar no botão **"Buscar Clima"** para enviar a solicitação.
+   
+4. **Exibição dos Resultados:**
+   - O aplicativo irá buscar os dados do clima na **WeatherAPI**.
+   - Caso a requisição seja bem-sucedida, os seguintes dados serão exibidos na tela:
+     - **Cidade, Estado:** O nome da cidade e o estado que você pesquisou.
+     - **País:** O país onde a cidade está localizada.
+     - **Temperatura:** A temperatura atual da cidade (em graus Celsius).
+     - **Condição:** A condição climática no momento (ex: ensolarado, nublado, etc.).
+   
+5. **Mensagens de Erro:**
+   - Se a cidade não for encontrada ou algum erro ocorrer durante a consulta, o aplicativo exibirá uma mensagem de erro informando que não foi possível obter os dados do tempo.
 
-## Saiba mais
+6. **Carregando Dados:**
+   - Durante o processo de consulta, uma mensagem de **"Carregando..."** será exibida enquanto o aplicativo espera a resposta da API.
 
-Para saber mais sobre como desenvolver seu projeto com o Expo, consulte os seguintes recursos:
+7. **Interação Simples e Ágil:**
+   - O aplicativo foi desenvolvido para ser simples e direto, com uma interface limpa, onde você pode buscar o clima para qualquer cidade de maneira prática e rápida.
 
-- [Documentação do Expo](https://docs.expo.dev/): Aprenda os fundamentos ou aprofunde-se em tópicos avançados com nossos [guias](https://docs.expo.dev/guides).
-- [Tutorial do Learn Expo](https://docs.expo.dev/tutorial/introduction/): Siga um tutorial passo a passo onde você criará um projeto que roda em Android, iOS e na web.
+## Como Testar Novamente
 
-## Junte-se à comunidade
+- Caso queira testar em diferentes cidades, basta digitar um novo nome de cidade e repetir o processo! O aplicativo também irá limpar automaticamente a tela de erros ao realizar uma nova busca.
 
-Junte-se à nossa comunidade de desenvolvedores que criam aplicativos universais.
-
-- [Expo no GitHub](https://github.com/expo/expo): Veja nossa plataforma de código aberto e contribua.
-- [Comunidade Discord](https://chat.expo.dev): Converse com usuários do Expo e faça perguntas.
+Essa é a experiência básica de usuário no Clima Agora.
