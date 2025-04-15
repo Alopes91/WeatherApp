@@ -24,7 +24,7 @@ WeatherApp/
 ├── package-lock.json       # Registro exato das versões instaladas das dependências
 ├── tsconfig.json           # Configuração do compilador TypeScript
 ```
-
+     
 ### 🧠 Descrição dos Arquivos e Pastas
 
 - **`app/index.tsx`**  
