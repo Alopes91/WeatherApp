@@ -1,3 +1,7 @@
+# Relatório Técnico #
+
+Este Relatório Técnico descreve o processo de desenvolvimento do aplicativo Clima Agora, os desafios encontrados e como eles foram solucionados. Por fim, apresenta uma comparação entre o Axios e Fetch. 
+
 ## 🛠️ Processo de Desenvolvimento
 
 O desenvolvimento do aplicativo **Clima Agora** seguiu uma abordagem prática e incremental, focada em simplicidade, usabilidade e funcionalidade. Abaixo, descrevo as principais etapas e decisões envolvidas:
